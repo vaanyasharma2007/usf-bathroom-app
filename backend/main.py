@@ -35,7 +35,7 @@ def get_bathrooms():
             "area_type":"shower",
             "total_units":6,
             "available_units":2,
-            "status":get_status(2,True)
+            "status":get_status(2,False)
         }
 
     ]
