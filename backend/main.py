@@ -1,10 +1,20 @@
 from fastapi import FastAPI
-
+from pydantic import BaseModel
 app = FastAPI()
-
+# Represents a bathroom area in the application
+class BathroomArea(BaseModel):
+    id:int
+    building:str
+    floor:int
+    gender:str
+    area_type:str
+    total_units:int
+    available_units:int
+    is_out_of_service:bool
 @app.get("/")
 def home():
     return {"message": "Welcome to the bathroom availability app!"}
+# determines bathroom availability based on occupany and maintance status
 def get_status(available_units,is_out_of_service):
     if is_out_of_service:
         return "out_of_service"
