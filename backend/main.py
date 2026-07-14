@@ -13,7 +13,9 @@ class BathroomArea(BaseModel):
     is_out_of_service:bool
 @app.get("/")
 def home():
-    return {"message": "Welcome to the bathroom availability app!"}
+    return {"message": "Welcome to the bathroom availability app!",
+    "version": "0.1.0"
+}
 # determines bathroom availability based on occupany and maintance status
 def get_status(available_units,is_out_of_service):
     if is_out_of_service:
