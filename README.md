@@ -40,3 +40,18 @@ The current focus is building a scalable backend architecture before implementin
 ## Author
 
 Vaanya Sharma
+
+## Example API Response
+
+```json
+[
+  {
+    "id": 1,
+    "building": "Castor Hall",
+    "floor": 1,
+    "gender": "women",
+    "area_type": "toilet",
+    "available_units": 3,
+    "status": "available"
+  }
+]
